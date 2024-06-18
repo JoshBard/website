@@ -1,32 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <title>Josh Bardwick</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Josh Bardwick</title>
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tab {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tab:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#Home {background-color:green;}
+#Projects {background-color:rgb(0, 128, 45);}
+#About {background-color:rgb(0, 128, 90);}
+#Contact {background-color:rgb(0, 128, 135);}
+</style>
 </head>
+<body>
+
+<p>Click on the buttons inside the tabbed menu:</p>
 
 <div id="Home" class="tabcontent">
     <h1>Home</h1>
     <p>London is the capital city of England.</p>
-  </div>
+</div>
   
-  <div id="Projects" class="tabcontent">
+<div id="Projects" class="tabcontent">
     <h1>Projects</h1>
     <p>Paris is the capital of France.</p>
-  </div>
+</div>
   
-  <div id="About" class="tabcontent">
+<div id="About" class="tabcontent">
     <h1>About</h1>
     <p>
         Hi, my name is Josh Bardwick. I am studying computer engineer at Boston University with a concentration in Machine Learning.
         My graduation is expected in May 2025.
+        <br>
 
         My concentration in Machine Learning has given me in-depth experience with deep neural networks, particularly image 
         segmentation convolutional neural networks like detectron2. My coursework has involved many projects with PyTorch, a
         library I am confident in using. Additionally, I have taken operating systems at BU, a difficult, and programming
         intensive course that has given me excellent C and C++ skills. My courses have taught me programming as it relates to
         hardware, an important understanding that has improved my abilities as an engineer.
+        <br>
 
         ## ADD NOTE ABOUT EK210 AND LOGIC CLASSES ##
 
@@ -36,30 +72,43 @@
         high-performance computing. This role was a great learning experience. The old simulator is a large program with
         thousands of lines of code and initially, it was difficult for me to parse. I came away from this position with
         relevant experience in software design and working on a team with other people's code. 
+        <br>
 
         This role was also important for me because I have a passion for environmental protection. I hope to use my skills as an
         engineer to protect our Earth, especially as tech innovation requires increasing rare raw materials and energy. Part of
         my passion for the environment comes from growing up on the coast in California. I spent two summers working at a kayak
         rental company called Seatrek. Spending my day on the San Francisco Bay was wonderful and I look to work on the water in my
         future. 
+        <br>
 
         I am also not just an engineer! Some of my passions include running (trail and road), music, Formula 1,
         and Magic the Gathering.
+        <br>
     </p>
-  </div>
-  
-  <div id="Contact" class="tabcontent">
-    <h1>Contact</h1>
-    <p>
-        email: josh.bardwick@gmail.com
-        linkedin: www.linkedin.com/in/josh-bardwick 
-        github: https://github.com/JoshBard
-    </p>
-  </div>
-  
-  <button class="tablink" onclick="openCity('Home', this, 'red')" id="defaultOpen">Home</button>
-  <button class="tablink" onclick="openCity('Projects', this, 'green')">Projects</button>
-  <button class="tablink" onclick="openCity('About', this, 'blue')">About</button>
-  <button class="tablink" onclick="openCity('Contact', this, 'orange')">Contact</button>
+</div>
 
+<button class="tab" onclick="openTab('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tab" onclick="openTab('Projects', this, 'green')">Projects</button>
+<button class="tab" onclick="openTab('About', this, 'blue')">About</button>
+<button class="tab" onclick="openTab('Contact', this, 'orange')">Contact</button>
+<script>
+function openTab(cityName,elmnt,color) {
+  var i, tabcontent, tabs;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tabs = document.getElementsByClassName("tabs");
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
 </html>
