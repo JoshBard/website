@@ -4,44 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <title>Josh Bardwick</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .header {
-            background-color: #4CAF50;
-            overflow: hidden;
-        }
-        .header a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        .header a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .header a.active {
-            background-color: #4CAF50;
-            color: white;
-        }
-    </style>
 </head>
 
-<body>
-    <div class="header">
-        <a href="#home" class="active">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <h1>Welcome to my Website!</h1>
+<div id="London" class="tabcontent">
+    <h1>London</h1>
+    <p>London is the capital city of England.</p>
+  </div>
+  
+  <div id="Paris" class="tabcontent">
+    <h1>Paris</h1>
+    <p>Paris is the capital of France.</p>
+  </div>
+  
+  <div id="About" class="tabcontent">
+    <h1>About</h1>
     <p>
-        Hi, my name is Josh Bardwick. I am studying computer engineering at Boston University with a concentration in Machine Learning.
+        Hi, my name is Josh Bardwick. I am studying computer engineer at Boston University with a concentration in Machine Learning.
         My graduation is expected in May 2025.
 
         My concentration in Machine Learning has given me in-depth experience with deep neural networks, particularly image 
@@ -67,8 +45,28 @@
 
         I am also not just an engineer! Some of my passions include running (trail and road), music, Formula 1,
         and Magic the Gathering.
+    </p>
+  </div>
+  
+  <div id="Contact Me" class="tabcontent">
+    <h1>Contact Me</h1>
+    <p>
+        email: josh.bardwick@gmail.com
+        linkedin: www.linkedin.com/in/josh-bardwick 
+        github: https://github.com/JoshBard
+    </p>
+  </div>
+  
+  <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">London</button>
+  <button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
+  <button class="tablink" onclick="openCity('About', this, 'blue')">Tokyo</button>
+  <button class="tablink" onclick="openCity('Contact Me', this, 'orange')">Oslo</button>
 
-        If you want to reach out, please contact me, my email is josh.bardwick@gmail.com
+<body>
+    <h1>Welcome to my Website!</h1>
+    <p>
+        
+
     </p>
 </body>
 </html>
