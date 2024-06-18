@@ -22,7 +22,6 @@ body {font-family: "Lato", sans-serif;}
   background-color: #777;
 }
 
-/* Style the tab content */
 .tabcontent {
   color: white;
   display: none;
@@ -37,8 +36,6 @@ body {font-family: "Lato", sans-serif;}
 </style>
 </head>
 <body>
-
-<p>Click on the buttons inside the tabbed menu:</p>
 
 <div id="Home" class="tabcontent">
     <h1>Home</h1>
@@ -88,9 +85,9 @@ body {font-family: "Lato", sans-serif;}
 </div>
 
 <button class="tab" onclick="openTab('Home', this, 'green')" id="defaultOpen">Home</button>
-<button class="tab" onclick="openTab('Projects', this, rgb(0, 128, 45))">Projects</button>
-<button class="tab" onclick="openTab('About', this, rgb(0, 128, 90))">About</button>
-<button class="tab" onclick="openTab('Contact', this, rgb(0, 128, 135))">Contact</button>
+<button class="tab" onclick="openTab('Projects', this, 'rgb(0, 128, 45)')">Projects</button>
+<button class="tab" onclick="openTab('About', this, 'rgb(0, 128, 90)')">About</button>
+<button class="tab" onclick="openTab('Contact', this, 'rgb(0, 128, 135)')">Contact</button>
 <script>
 function openTab(cityName,elmnt,color) {
   var i, tabcontent, tabs;
@@ -106,7 +103,7 @@ function openTab(cityName,elmnt,color) {
   elmnt.style.backgroundColor = color;
 
 }
-// Get the element with id="defaultOpen" and click on it
+
 document.getElementById("defaultOpen").click();
 </script>
    
