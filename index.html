@@ -6,9 +6,18 @@
 <style>
 body {font-family: "Lato", sans-serif;}
 
-.small-img {
-            max-width: 10%;
-            height: auto;
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.image-container a {
+    max-width: 10%; /* Adjust this value as needed */
+    margin: 10%;
+}
+.image-container img {
+    width: 10%;
+    height: auto;
 }
 
 .tab {
@@ -100,18 +109,21 @@ body {font-family: "Lato", sans-serif;}
 
 <div id="Contact" class="tabcontent">
     <h1>Contact</h1>
-    <img src="gmailLogo.png" alt="Gmail Logo" class="small-img">
-    <a href="mailto:josh.bardwick@gmail.com">Gmail</a>
-    <br><br>
-    <img src="githubLogo.png" alt="GitHub Logo" class="small-img">
-    <a href="https://github.com/JoshBard">GitHub</a>
-    <br><br>
-    <img src="linkedinLogo.png" alt="LinkedIn Logo" class="small-img">
-    <a href="https://www.linkedin.com/in/josh-bardwick/">LinkedIn</a>
-    <br><br>
-    <img src="twitchLogo.png" alt="Twitch Logo" class="small-img">
-    <a href="https://www.twitch.tv/freshbakedbagel/about">Twitch</a>
-    <br><br>
+
+    <div class="image-container">
+        <a href="mailto:josh.bardwick@gmail.com" target="_blank">
+            <img src="gmailLogo.png" alt="Gmail Logo">
+        </a>
+        <a href="https://github.com/JoshBard" target="_blank">
+            <img src="githubLogo.png" alt="GitHub Logo">
+        </a>
+        <a href="https://www.linkedin.com/in/josh-bardwick/" target="_blank">
+            <img src="linkedinLogo.png" alt="LinkedIn Logo">
+        </a>
+        <a href="https://www.twitch.tv/freshbakedbagel/about" target="_blank">
+            <img src="twitchLogo.png" alt="Twitch Logo">
+        </a>
+    </div>
 <div>
 
 <script>
