@@ -33,12 +33,14 @@ body {font-family: "Lato", sans-serif;}
 #Projects {background-color:rgb(0, 128, 45);}
 #About {background-color:rgb(0, 128, 90);}
 #Contact {background-color:rgb(0, 128, 135);}
-
 </style>
-
-
 </head>
 <body>
+
+<button class="tab" onclick="openTab('Home', this, 'green')" id="defaultOpen">Home</button>
+<button class="tab" onclick="openTab('Projects', this, 'rgb(0, 128, 45)')">Projects</button>
+<button class="tab" onclick="openTab('About', this, 'rgb(0, 128, 90)')">About</button>
+<button class="tab" onclick="openTab('Contact', this, 'rgb(0, 128, 135)')">Contact</button>
 
 <div id="Home" class="tabcontent">
     <h1>Home</h1>
@@ -94,7 +96,6 @@ body {font-family: "Lato", sans-serif;}
     LinkedIn: www.linkedin.com/in/josh-bardwick 
     Twitch: https://www.twitch.tv/freshbakedbagel/about
 <div>
-
 
 <script>
 function openTab(cityName,elmnt,color) {
