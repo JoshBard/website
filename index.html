@@ -43,33 +43,19 @@ body {font-family: "Lato", sans-serif;}
   text-align: center;
 }
 
-#Home {background-color:green;}
-#Projects {background-color:rgb(0, 128, 45);}
-#About {background-color:rgb(0, 128, 90);}
-#Contact {background-color:rgb(0, 128, 135);}
+#Projects {background-color:white;}
+#Photography {background-color:white;}
+#AboutMe {background-color:white ;}
 </style>
 </head>
 <body>
 
-<button class="tab" onclick="openTab('Home', this, 'green')" id="defaultOpen">Home</button>
-<button class="tab" onclick="openTab('Projects', this, 'rgb(0, 128, 45)')">Projects</button>
-<button class="tab" onclick="openTab('About', this, 'rgb(0, 128, 90)')">About</button>
-<button class="tab" onclick="openTab('Contact', this, 'rgb(0, 128, 135)')">Contact</button>
+<button class="tab" onclick="openTab('Projects', this, 'green')" id="defaultOpen">Home</button>
+<button class="tab" onclick="openTab('Photgraphy', this, 'rgb(0, 128, 45)')">Projects</button>
+<button class="tab" onclick="openTab('About Me', this, 'rgb(0, 128, 90)')">About</button>
 
-<div id="Home" class="tabcontent">
-    <p>London is the capital city of England.</p>
-</div>
-  
 <div id="Projects" class="tabcontent">
-    <p>Paris is the capital of France.</p>
-</div>
-  
-<div id="About" class="tabcontent">
     <p>
-        Hi, my name is Josh Bardwick. I am studying computer engineer at Boston University with a concentration in Machine Learning.
-        My graduation is expected in May 2025.
-        <br><br>
-
         My concentration in Machine Learning has given me in-depth experience with deep neural networks, particularly image 
         segmentation convolutional neural networks like detectron2. My coursework has involved many projects with PyTorch, a
         library I am confident in using. Additionally, I have taken operating systems at BU, a difficult, and programming
@@ -98,13 +84,25 @@ body {font-family: "Lato", sans-serif;}
         rental company called Seatrek. Spending my day on the San Francisco Bay was wonderful and I look to work on the water in my
         future. 
         <br><br>
-
-        I am also not just an engineer! Some of my passions include running (trail and road), music, Formula 1,
-        and Magic the Gathering.
     </p>
 </div>
-
-<div id="Contact" class="tabcontent">
+  
+<div id="Photography" class="tabcontent">
+    <p>Paris is the capital of France.</p>
+</div>
+  
+<div id="Profile" class="tabcontent">
+    <p>
+        <strong>Josh Bardwick</strong>
+        <br>
+        I am studying computer engineering at Boston University with a concentration in Machine Learning. My graduation is expected in May 2025.
+        <br><br>
+        I am passionate about contributing to climate change research as part of an engineering team. The ocean is an integral piece of our ecosystem, and I aim to help researchers collect critical data using autonomous vehicles. My expertise in low-level programming languages, performance-aware programming, embedded systems, machine learning, and reinforcement learning positions me well to make meaningful contributions.
+        <br><br>
+        Originally from the Bay Area, California, I discovered trail running a few years ago on the Dipsea Trail. I recently completed my first marathon-distance run in Boston, where the challenging air made it all the more rewarding.
+        <br><br>
+        Beyond engineering, I am an avid Magic: The Gathering player—deckbuilding and drafting are two of my favorite hobbies. Check out my Moxfield profile!
+    </p>
     <div class="image-container">
         <a href="mailto:josh.bardwick@gmail.com" target="_blank">
             <img src="gmailLogo.png" alt="Gmail Logo">
@@ -122,7 +120,7 @@ body {font-family: "Lato", sans-serif;}
             <img src="moxfieldLogo.png" alt="Moxfield Logo">
         </a>
     </div>
-<div>
+</div>
 
 <script>
 function openTab(cityName,elmnt,color) {
