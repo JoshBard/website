@@ -3,17 +3,20 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Josh Bardwick</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-body {font-family: "Lato", sans-serif;}
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
 .image-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 10px;
 }
 .image-container a {
-    max-width: 20%;
-    margin: 5%;
+    max-width: 10%; /* Reduce image size */
 }
 .image-container img {
     width: 100%;
@@ -21,33 +24,35 @@ body {font-family: "Lato", sans-serif;}
 }
 
 .tab {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 10px 15px;
-  font-size: 17px;
-  width: 33.33%;
-  text-align: center;
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 17px;
+    width: 33.33%;
+    text-align: center;
 }
 
 .tab:hover {
-  background-color: #777;
+    background-color: #777;
 }
 
 .tabcontent {
-  color: black;
-  display: none;
-  padding: 20px;
-  text-align: left;
-  background-color: white;
-  border-top: 2px solid #555;
+    color: black;
+    display: none;
+    padding: 20px;
+    text-align: left;
+    background-color: white;
+    border-top: 2px solid #555;
 }
 
 .tabcontent p {
-  margin: 0 0 20px;
+    margin: 0 0 20px;
+    font-size: 1.2rem; /* Increase text size */
+    line-height: 1.6; /* Improve readability */
 }
 </style>
 </head>
