@@ -24,7 +24,7 @@ body {
 }
 
 .tab {
-    background-color: #555;
+    background-color: #999; /* Default gray background */
     color: white;
     float: left;
     border: none;
@@ -34,10 +34,17 @@ body {
     font-size: 17px;
     width: 33.33%;
     text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .tab:hover {
-    background-color: #777;
+    background-color: #777; /* Slightly darker gray on hover */
+}
+
+.tab.active {
+    background-color: white; /* White when selected */
+    color: black; /* Black text for better contrast */
+    border-top: 2px solid #555; /* Optional border for styling */
 }
 
 .tabcontent {
@@ -59,92 +66,81 @@ body {
 <body>
 
 <!-- Navigation Tabs -->
-<button class="tab" onclick="openTab('Projects', this, 'green')" id="defaultOpen">Projects</button>
-<button class="tab" onclick="openTab('Photography', this, 'rgb(0, 128, 45)')">Photography</button>
-<button class="tab" onclick="openTab('Profile', this, 'rgb(0, 128, 90)')">About Me</button>
+<button class="tab" onclick="openTab('Projects', this)" id="defaultOpen">Projects</button>
+<button class="tab" onclick="openTab('Photography', this)">Photography</button>
+<button class="tab" onclick="openTab('Profile', this)">About Me</button>
 
 <!-- Projects Tab Content -->
 <div id="Projects" class="tabcontent">
-    <p>
-        My concentration in Machine Learning has given me in-depth experience with deep neural networks, particularly image 
-        segmentation convolutional neural networks like detectron2. My coursework has involved many projects with PyTorch, a
-        library I am confident in using. Additionally, I have taken operating systems at BU, a difficult, and programming
-        intensive course that has given me excellent C and C++ skills. My courses have taught me programming as it relates to
-        hardware, an important understanding that has improved my abilities as an engineer.
-    </p>
-    <p>
-        Part of my education has also centered around logic and hardware design. I have worked extensively with the hardware 
-        description language Verilog. My projects in Verilog include building a tennis game with the lights on an FPGA and
-        creating a five-stage CPU with lookahead logic. As far as physical circuit building goes, I designed and assembled
-        the circuit for an overhead touchless light. This was a challenging project because of the small size of the housing
-        and required complex wiring with Arduinos in parallel.
-    </p>
-    <p>
-        Beyond my coursework, I spent my junior year working as a research assistant at the Performance and Energy Aware
-        Computing Lab (PEACLab). At PEACLab, I was responsible for rebuilding a simulator used to test and optimize
-        power-matching algorithms in large data centers. These algorithms are critical for reducing the environmental cost of
-        high-performance computing. This role was a great learning experience. The old simulator is a large program with
-        thousands of lines of code and initially, it was difficult for me to parse. I came away from this position with
-        relevant experience in software design and working on a team with other people's code.
-    </p>
 </div>
   
 <!-- Photography Tab Content -->
 <div id="Photography" class="tabcontent">
-    <p>Paris is the capital of France.</p>
+    <h2>Photography</h2>
+    <p>Some photos that I have taken on my Canon Sure Shot Max. Taken on Fujifilm 400 and Kodak ultramax.</p>
+    <div class="image-container">
+        <img src="published/hotdogs.jpg" alt="Hotdogs">
+        <img src="published/bayou.JPG" alt="Bayou">
+        <img src="published/cdmxstorm.JPG" alt="CDMX Storm">
+        <img src="published/malpica.jpg" alt="Malpica">
+        <img src="published/pipes.jpg" alt="Pipes">
+        <img src="published/ptreyeslighthouse.jpg" alt="Point Reyes Lighthouse">
+        <img src="published/sailinglesson.jpg" alt="Sailing Lesson">
+        <img src="published/saltpointwave.JPG" alt="Salt Point Wave">
+        <img src="published/ufcparty.jpg" alt="UFC Party">
+    </div>
 </div>
   
 <!-- About Me Tab Content -->
 <div id="Profile" class="tabcontent">
     <p>
         <strong>Josh Bardwick</strong>
-        <br><br>
         I am studying computer engineering at Boston University with a concentration in Machine Learning. My graduation is expected in May 2025.
     </p>
     <p>
         I am passionate about contributing to climate change research as part of an engineering team. The ocean is an integral piece of our ecosystem, and I aim to help researchers collect critical data using autonomous vehicles. My expertise in low-level programming languages, performance-aware programming, embedded systems, machine learning, and reinforcement learning positions me well to make meaningful contributions.
     </p>
     <p>
-        Originally from the Bay Area, California, I discovered trail running a few years ago on the Dipsea Trail. I recently completed my first marathon-distance run in Boston, where the challenging air made it all the more rewarding.
+        Originally from the Bay Area, California, I discovered trail running a few years ago on the Dipsea Trail. I recently completed my first marathon-distance run in Boston. I am training to run marathon-distance on a trail this Spring.
     </p>
     <p>
-        Beyond engineering, I am an avid Magic: The Gathering player—deckbuilding and drafting are two of my favorite hobbies. Check out my Moxfield profile!
+        Beyond engineering, I am an avid Magic The Gathering player, amateur photographer, and basketball fan. 
     </p>
     <div class="image-container">
         <a href="mailto:josh.bardwick@gmail.com" target="_blank">
-            <img src="gmailLogo.png" alt="Gmail Logo">
+            <img src="logos/gmailLogo.png" alt="Gmail Logo">
         </a>
         <a href="https://github.com/JoshBard" target="_blank">
-            <img src="githubLogo.png" alt="GitHub Logo">
+            <img src="logos/githubLogo.png" alt="GitHub Logo">
         </a>
         <a href="https://www.linkedin.com/in/josh-bardwick/" target="_blank">
-            <img src="linkedinLogo.png" alt="LinkedIn Logo">
+            <img src="logos/linkedinLogo.png" alt="LinkedIn Logo">
         </a>
         <a href="https://www.twitch.tv/freshbakedbagel/about" target="_blank">
-            <img src="twitchLogo.png" alt="Twitch Logo">
+            <img src="logos/twitchLogo.png" alt="Twitch Logo">
         </a>
         <a href="https://www.moxfield.com/users/jobardwickman" target="_blank">
-            <img src="moxfieldLogo.png" alt="Moxfield Logo">
+            <img src="logos/moxfieldLogo.png" alt="Moxfield Logo">
         </a>
     </div>
 </div>
 
 <script>
-function openTab(tabName, elmnt, color) {
+function openTab(tabName, elmnt) {
     var i, tabcontent, tab;
     // Hide all tabcontent
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-    // Reset tab backgrounds
+    // Remove active class from all tabs
     tab = document.getElementsByClassName("tab");
     for (i = 0; i < tab.length; i++) {
-        tab[i].style.backgroundColor = "";
+        tab[i].classList.remove("active");
     }
-    // Show the current tab and set its background color
+    // Show the current tab and add the active class
     document.getElementById(tabName).style.display = "block";
-    elmnt.style.backgroundColor = color;
+    elmnt.classList.add("active");
 }
 
 // Open the default tab
