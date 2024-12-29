@@ -18,10 +18,15 @@ body {
 .image-container a {
     max-width: 10%; /* Reduce image size */
 }
+.image-container img {
+    width: 100%;
+    height: auto;
+}
 
-.photo-image-container img {
-    max-width: 60%; /* Reduce photography image size to 60% */
-    height: auto; /* Maintain aspect ratio */
+#Photography .image-container img {
+    width: 60%; /* Set images to 60% of their original size */
+    height: auto;
+    margin: 5px;
 }
 
 .tab {
@@ -84,7 +89,7 @@ body {
 <div id="Photography" class="tabcontent">
     <h2>Photography</h2>
     <p>Some photos that I have taken on my Canon Sure Shot Max. Taken on Fujifilm 400 and Kodak ultramax.</p>
-    <div class="photo-image-container">
+    <div class="image-container">
         <img src="published/hotdogs.JPG" alt="Hotdogs">
         <img src="published/bayou.JPG" alt="Bayou">
         <img src="published/cdmxstorm.JPG" alt="CDMX Storm">
