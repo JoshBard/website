@@ -23,12 +23,6 @@ body {
     height: auto;
 }
 
-#Photography .image-container img {
-    width: 60%; /* Set images to 60% of their original size */
-    height: auto;
-    margin: 5px;
-}
-
 .tab {
     background-color: #999; /* Default gray background */
     color: white;
@@ -44,7 +38,7 @@ body {
 }
 
 .tab:hover {
-    background-color: #77777750; /* Slightly darker gray on hover */
+    background-color: #777; /* Slightly darker gray on hover */
 }
 
 .tab.active {
@@ -67,36 +61,49 @@ body {
     font-size: 1.2rem; /* Increase text size */
     line-height: 1.6; /* Improve readability */
 }
-
-/* Fix spacing issue */
-.tabcontent h2 {
-    margin-top: 0; /* Remove top margin */
-    margin-bottom: 10px; /* Optional: control space after the heading */
-}
-
-.tabcontent p {
-    margin-top: 0; /* Remove top margin */
-    margin-bottom: 20px; /* Ensure consistent spacing between paragraphs */
-}
 </style>
 </head>
 <body>
 
 <!-- Navigation Tabs -->
-<button class="tab" onclick="openTab('Profile', this)" id="defaultOpen">About Me</button>
-<button class="tab" onclick="openTab('Projects', this)">Projects</button>
+<button class="tab" onclick="openTab('Projects', this)" id="defaultOpen">Projects</button>
 <button class="tab" onclick="openTab('Photography', this)">Photography</button>
+<button class="tab" onclick="openTab('Profile', this)">About Me</button>
 
+<!-- Projects Tab Content -->
+<div id="Projects" class="tabcontent">
+</div>
+  
+<!-- Photography Tab Content -->
+<div id="Photography" class="tabcontent">
+    <h2>Photography</h2>
+    <p>Some photos that I have taken on my Canon Sure Shot Max. Taken on Fujifilm 400 and Kodak ultramax.</p>
+    <div class="image-container">
+        <img src="published/hotdogs.JPG" alt="Hotdogs">
+        <img src="published/bayou.JPG" alt="Bayou">
+        <img src="published/cdmxstorm.JPG" alt="CDMX Storm">
+        <img src="published/malpica.jpg" alt="Malpica">
+        <img src="published/pipes.jpg" alt="Pipes">
+        <img src="published/ptreyeslighthouse.jpg" alt="Point Reyes Lighthouse">
+        <img src="published/sailinglesson.jpg" alt="Sailing Lesson">
+        <img src="published/saltpointwave.JPG" alt="Salt Point Wave">
+        <img src="published/ufcparty.jpg" alt="UFC Party">
+    </div>
+</div>
+  
 <!-- About Me Tab Content -->
 <div id="Profile" class="tabcontent">
-    <h2>Josh Bardwick</h2>
     <p>
+        <strong>Josh Bardwick</strong>
         I am studying computer engineering at Boston University with a concentration in Machine Learning. My graduation is expected in May 2025.
-        <br>
+    </p>
+    <p>
         I am passionate about contributing to climate change research as part of an engineering team. The ocean is an integral piece of our ecosystem, and I aim to help researchers collect critical data using autonomous vehicles. My expertise in low-level programming languages, performance-aware programming, embedded systems, machine learning, and reinforcement learning positions me well to make meaningful contributions.
-        <br>
+    </p>
+    <p>
         Originally from the Bay Area, California, I discovered trail running a few years ago on the Dipsea Trail. I recently completed my first marathon-distance run in Boston. I am training to run marathon-distance on a trail this Spring.
-        <br>
+    </p>
+    <p>
         Beyond engineering, I am an avid Magic The Gathering player, amateur photographer, and basketball fan. 
     </p>
     <div class="image-container">
@@ -109,31 +116,12 @@ body {
         <a href="https://www.linkedin.com/in/josh-bardwick/" target="_blank">
             <img src="logos/linkedinLogo.png" alt="LinkedIn Logo">
         </a>
+        <a href="https://www.twitch.tv/freshbakedbagel/about" target="_blank">
+            <img src="logos/twitchLogo.png" alt="Twitch Logo">
+        </a>
         <a href="https://www.moxfield.com/users/jobardwickman" target="_blank">
             <img src="logos/moxfieldLogo.png" alt="Moxfield Logo">
         </a>
-    </div>
-</div>
-
-<!-- Projects Tab Content -->
-<div id="Projects" class="tabcontent">
-    <h2>This tab will contain details about my projects.</h2>
-    <p> projects</p>
-</div>
-  
-<!-- Photography Tab Content -->
-<div id="Photography" class="tabcontent">
-    <p>Some photos that I have taken on my Canon Sure Shot Max. Taken on Fujifilm 400 and Kodak ultramax.</p>
-    <div class="image-container">
-        <img src="published/hotdogs.JPG" alt="Hotdogs">
-        <img src="published/bayou.JPG" alt="Bayou">
-        <img src="published/cdmxstorm.JPG" alt="CDMX Storm">
-        <img src="published/malpica.jpg" alt="Malpica">
-        <img src="published/pipes.jpg" alt="Pipes">
-        <img src="published/ptreyeslighthouse.jpg" alt="Point Reyes Lighthouse">
-        <img src="published/sailinglesson.jpg" alt="Sailing Lesson">
-        <img src="published/saltpointwave.JPG" alt="Salt Point Wave">
-        <img src="published/ufcparty.jpg" alt="UFC Party">
     </div>
 </div>
 
